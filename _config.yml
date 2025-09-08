@@ -307,8 +307,8 @@ collections:
       permalink: /example/:path/
 
   experiences:
-    output: false
-    permalink: /experience/:path/
+    output: true
+    permalink: /experiences/:path/
       
 # File inclusion/exclusion
 # ----------------------------------------------------------------------------------------
