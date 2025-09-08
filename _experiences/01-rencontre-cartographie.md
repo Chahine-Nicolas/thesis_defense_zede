@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rencontre autour de la cartographie
+title: Expérience 1
 date: 2023-10-12
 image:
   path: /assets/img/geovis.png

@@ -1,5 +1,5 @@
 ---
-title: Rencontre blabla
+title: Expérience 2
 date: 2024-10-12
 layout: post            # ou "project" si tu préfères le layout project ; utilisé pour la page individuelle
 image:
