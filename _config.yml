@@ -306,9 +306,9 @@ collections:
       output: true
       permalink: /example/:path/
 
-  experiences:           # ← nouvelle collection
-    output: true
-    permalink: /experience/:path/
+  # experiences:           # ← nouvelle collection
+  #   output: true
+  #   permalink: /experience/:path/
       
 # File inclusion/exclusion
 # ----------------------------------------------------------------------------------------
