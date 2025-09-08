@@ -52,12 +52,12 @@ permalink: /experience/
 
 <div class="experience-grid">
   <a class="experience-card" href="/Experience_utilisateurs/index.php">
-    <img src="/assets/img/utilisateurs.jpg" alt="Expérience utilisateurs">
+    <img src="/assets/img/geovis.png" alt="Expérience utilisateurs">
     <h3>Expérience utilisateurs</h3>
     <p>Testez la perception des ruptures sur une carte pan-scalaire.</p>
   </a>
   <a class="experience-card" href="/Experiences_designers/index.php">
-    <img src="/assets/img/designers.jpg" alt="Expérience designers">
+    <img src="/assets/img/geovis.png" alt="Expérience designers">
     <h3>Expérience designers</h3>
     <p>Expérimentez la conception cartographique et le design progressif.</p>
   </a>
