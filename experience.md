@@ -3,3 +3,63 @@ layout: experience-grid
 title: Expériences
 permalink: /experience/
 ---
+
+<style>
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.2em;
+  margin: 2em 0;
+}
+.experience-card {
+  background: #fff;
+  border-radius: 1em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+  overflow: hidden;
+  text-align: center;
+  padding: 1.5em 1em 1.2em 1em;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+.experience-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(25,118,210,0.18);
+  border-color: #90caf9;
+}
+.experience-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 1em;
+  border-radius: 0.7em;
+}
+.experience-card h3 {
+  margin: 0.5em 0 0.2em 0;
+  font-size: 1.25em;
+  color: #1976d2;
+}
+.experience-card p {
+  color: #444;
+  font-size: 1em;
+}
+@media (max-width: 700px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="experience-grid">
+  <a class="experience-card" href="/Experience_utilisateurs/index.php">
+    <img src="/assets/img/geovis.png" alt="Expérience utilisateurs">
+    <h3>Expérience utilisateurs</h3>
+    <p>Testez la perception des ruptures sur une carte pan-scalaire.</p>
+  </a>
+  <a class="experience-card" href="/Experiences_designers/index.php">
+    <img src="/assets/img/geovis.png" alt="Expérience designers">
+    <h3>Expérience designers</h3>
+    <p>Expérimentez la conception cartographique et le design progressif.</p>
+  </a>
+  <!-- Ajoutez d'autres expériences ici si besoin -->
+</div>

@@ -3,7 +3,7 @@
 
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-# url:                   https://berenice-lm.github.io
+url:                   https://berenice-lm.github.io
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
@@ -152,11 +152,11 @@ defaults:
       layout:          plain
       sitemap:         false
 
-  # # You can use the following to enable comments on all posts.
-  # - scope:
-  #     type:            posts
-  #   values:
-  #     comments:        true
+  # You can use the following to enable comments on all posts.
+  - scope:
+      type:            posts
+    values:
+      comments:        true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
@@ -308,9 +308,9 @@ collections:
       output: true
       permalink: /example/:path/
 
-  experiences:           # ← nouvelle collection
+  experiences:
     output: true
-    permalink: /experience/:path/
+    permalink: /experiences/:path/
       
 # File inclusion/exclusion
 # ----------------------------------------------------------------------------------------
