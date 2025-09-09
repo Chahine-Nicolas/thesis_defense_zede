@@ -1,8 +1,26 @@
 ---
-layout: list
-title: Posts
-description: >
-  This is the `list` layout for showing blog posts, which shows just the title and groups them by year of publication.
-  Check out the `blog` layout for comparison.
-grouped: true
+layout: plain
+sitemap: false
 ---
+
+# Les piliers de la progressivité en cartographie
+
+blabla introduction
+
+## La séquence
+
+blabla
+
+## La cohérence
+
+blabla
+
+## Le sens
+
+blabla
+
+## Le rythme
+
+blabla
+
+lien avec musique.md
