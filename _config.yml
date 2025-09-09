@@ -305,12 +305,12 @@ collections:
     output:            true
 
   example:
-      output: true
-      permalink: /example/:path/
+    output:            true
+    permalink:         /example/:path/
 
   experiences:
-    output: true
-    permalink: /experiences/:path/
+    output:            true
+    permalink:         /experiences/:path/
       
 # File inclusion/exclusion
 # ----------------------------------------------------------------------------------------
