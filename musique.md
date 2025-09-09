@@ -18,14 +18,25 @@ Conversion en partition
   Votre navigateur ne supporte pas la lecture de vidéos.
 </video>
 
+Expliquer choix des instruments :
+- **Toponymes = Harpe** : blabla
+- **Route = Violon** : blabla
+- **Lac = Violoncelle** : blabla
+- **Rivière = Cornet** : blabla
+- **Bâti = Hautbois** : blabla
+- **Végétation = Basson** : blabla
+- **Voie Ferrée = Tuba** : blabla
+
 ## Écouter le Plan IGN
 
 ## Composer une carte pan-scalaire
 
-### La composition polyrythmique
+plusieurs manières de blabla
 
-### La composition soliste
+### 1) La composition polyrythmique
 
-### La composition homophonique
+### 2) La composition soliste
 
-### La composition en canon
+### 3) La composition homophonique
+
+### 4) La composition en canon
