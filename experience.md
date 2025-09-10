@@ -1,7 +1,7 @@
 ---
 layout: experience-grid
 title: Expériences
-permalink: /experiences/
+permalink: /experience/
 ---
 
 <style>
