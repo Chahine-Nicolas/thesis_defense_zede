@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Expérience utilisateurs
-date: 2025-15-06
+date: 2025-06-15
 image:
   path: /assets/img/exp1.png
 description: Expérience sur les ruptures cartographiques
