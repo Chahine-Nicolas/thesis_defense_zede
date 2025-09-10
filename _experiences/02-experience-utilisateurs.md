@@ -7,6 +7,6 @@ image:
 description: Expérience sur les ruptures cartographiques
 ---
 
-Vous pouvez retrouver l'interface ici : https://berenice-lm.github.io/Experience_utilisateurs/ 
+Vous pouvez retrouver l'interface ici : berenice-lm.github.io/Experience_utilisateurs/ 
 
 ## Expérience sur les ruptures cartographiques
