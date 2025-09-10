@@ -4,7 +4,7 @@ title: Expérience designers
 date: 2025-22-04   
 image:
   path: /assets/img/interface_appli.png
-description: Vous pouvez retrouver l'interface ici > https://berenice-lm.github.io/Experience_designers/
+description: Vous pouvez retrouver l'interface ici https://berenice-lm.github.io/Experience_designers/
 ---
 ## Expérience de conception multi-échelle
 
