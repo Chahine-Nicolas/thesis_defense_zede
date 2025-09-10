@@ -1,7 +1,7 @@
 ---
 layout: post  
 title: Expérience designers
-date: 2025-22-04   
+date: 2025-04-22  
 image:
   path: /assets/img/interface_appli.png
 description: Expérience de conception multi-échelle
