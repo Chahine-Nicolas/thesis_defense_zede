@@ -6,8 +6,6 @@ image:
   path: /assets/img/interface_appli.png
 description: Expérience de conception multi-échelle
 ---
-Vous pouvez retrouver l'interface ici berenice-lm.github.io/Experience_designers/
-
 ## Expérience de conception multi-échelle
 
 # Construire une carte pan-scalaire
