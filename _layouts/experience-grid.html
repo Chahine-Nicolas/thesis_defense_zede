@@ -1,50 +1,87 @@
+---
+layout: default
+---
+
 <style>
+/* Essai pour neutraliser toutes les largeurs forcées */
+.site-content, .main-content, .container, .page {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Supprime toutes les limites de largeur sur les conteneurs principaux */
+body, main, .content, .wrapper, .page-content {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
+  display: block !important;
 }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 21rem;
-  height: 100vh;
-  background-color: #f4f4f4;
-  padding: 2rem;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-}
-
-/* Contenu principal */
 .content {
-  margin-left: 21rem; /* même largeur que la sidebar */
-  padding: 2rem;
-  flex: 1;
+  margin-left: 21rem; /* ajuste selon la vraie largeur de la bannière */
+  padding: 2rem;      /* pour que ça respire un peu */
 }
 
-/* Grille de cartes */
+main {
+  display: block !important;
+}
+
+/* On garde le cadre prévu par le thème, sans max-width personnalisé */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  width: 100%; /* occupe tout l'espace disponible dans .content */
+}
+
+/* Style des cartes */
+.card {
+  background: #fff;
+  border-radius: 1em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-content h2 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: #1976d2;
 }
 </style>
 
-<div class="sidebar">
-  <h2>Sidebar</h2>
-  <p>Menu etc.</p>
-</div>
-
 <div class="content">
   <h1>{{ page.title }}</h1>
+
   <div class="cards">
     {% assign items = site.experiences | sort: "date" | reverse %}
     {% for post in items %}
       <article class="card">
-        <a href="{{ post.url | relative_url }}">
+        <a href="{{ post.url | relative_url }}" class="no-hover">
           {% if post.image and post.image.path %}
             <img src="{{ post.image.path | relative_url }}" alt="{{ post.title }}">
           {% elsif post.image %}
