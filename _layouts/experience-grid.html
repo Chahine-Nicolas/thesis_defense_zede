@@ -8,20 +8,21 @@ layout: default
   display: flex;
   flex-direction: column;
   gap: 3rem; /* espace entre les posts */
-  max-width: 1000px; /* largeur max de la zone de lecture */
-  margin: 2rem auto;
+  width: 100%;        /* pleine largeur */
+  max-width: none;    /* pas de limite */
+  margin: 2rem 0;     /* marges haut/bas uniquement */
 }
 
 /* Chaque post */
 .card.project-card {
   width: 100%;
+  margin: 0 auto;
   background: #fff;
   border-radius: 1em;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   overflow: hidden;
   border: 1px solid #e0e0e0;
 }
-
 /* Image en pleine largeur */
 .card.project-card img {
   width: 100%;
