@@ -6,46 +6,38 @@ permalink: /experiences/
 
 <style>
 .experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
   margin: 2em 0;
 }
+
 .experience-card {
   background: #fff;
   border-radius: 1em;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
   overflow: hidden;
-  text-align: center;
-  padding: 1.5em 1em 1.2em 1em;
+  padding: 0; /* supprime le centrage forcé */
   border: 1px solid #e0e0e0;
-  cursor: pointer;
 }
-.experience-card:hover {
-  transform: translateY(-12px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(25,118,210,0.18);
-  border-color: #90caf9;
-}
+
 .experience-card img {
-  width: 100%;
-  max-width: 220px;
+  width: 100%;   /* occupe toute la largeur */
   height: auto;
-  margin-bottom: 1em;
-  border-radius: 0.7em;
+  display: block;
 }
+
 .experience-card h3 {
-  margin: 0.5em 0 0.2em 0;
-  font-size: 1.25em;
+  margin: 0.8em 1em 0.3em 1em;
+  font-size: 1.6em;
   color: #1976d2;
+  text-align: left;
 }
+
 .experience-card p {
+  margin: 0 1em 1.2em 1em;
   color: #444;
-  font-size: 1em;
-}
-@media (max-width: 700px) {
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
+  font-size: 1.1em;
+  text-align: justify;
 }
 </style>
