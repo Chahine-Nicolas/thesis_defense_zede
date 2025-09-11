@@ -3,13 +3,16 @@ layout: default
 ---
 
 <style>
+/* On garde le cadre prévu par le thème, sans max-width personnalisé */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  width: 100%; /* occupe tout l'espace disponible dans .content */
 }
 
+/* Style des cartes */
 .card {
   background: #fff;
   border-radius: 1em;
@@ -36,7 +39,7 @@ layout: default
 }
 
 .card-content h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: 0.5rem 0;
   color: #1976d2;
 }
