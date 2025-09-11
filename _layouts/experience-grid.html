@@ -3,6 +3,14 @@ layout: default
 ---
 
 <style>
+/* Essai pour neutraliser toutes les largeurs forcées */
+.site-content, .main-content, .container, .page {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /* Supprime toutes les limites de largeur sur les conteneurs principaux */
 body, main, .content, .wrapper, .page-content {
   max-width: none !important;
