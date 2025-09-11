@@ -1,0 +1,35 @@
+/* Grille pour les expériences */
+.cards.grid {
+  display: flex;
+  flex-direction: column; /* liste verticale */
+  gap: 2.5rem;
+  margin: 2em 0;
+}
+
+.card.project-card {
+  background: #fff;
+  border-radius: 1em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.card.project-card img {
+  width: 100%; /* pleine largeur */
+  height: auto;
+  display: block;
+}
+
+.card.project-card h2 {
+  margin: 0.8em 1em 0.3em 1em;
+  font-size: 1.6em;
+  color: #1976d2;
+  text-align: left;
+}
+
+.card.project-card p {
+  margin: 0 1em 1.2em 1em;
+  color: #444;
+  font-size: 1.1em;
+  text-align: justify;
+}
