@@ -1,5 +1,5 @@
 ---
-layout: experience-grid
+layout: blog-example
 title: Expériences
 permalink: /experiences/
 ---
