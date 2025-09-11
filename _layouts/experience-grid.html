@@ -3,14 +3,31 @@ layout: default
 ---
 
 <style>
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* grille responsive */
-  gap: 2rem;
-  width: 100%;   /* occupe toute la largeur */
-  margin: 2rem 0;
+/* Neutraliser la contrainte de largeur imposée par le thème */
+.content {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
+/* Titre mieux aligné */
+.page-title {
+  margin: 1rem;
+  font-size: 2rem;
+  text-align: left;
+}
+
+/* Grille responsive pleine largeur */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin: 2rem;
+}
+
+/* Carte individuelle */
 .card {
   background: #fff;
   border-radius: 1em;
@@ -47,8 +64,8 @@ layout: default
 }
 </style>
 
-<div class="content" style="max-width:none; padding:0;">
-  <h1 style="margin-left:1rem;">{{ page.title }}</h1>
+<div class="content">
+  <h1 class="page-title">{{ page.title }}</h1>
 
   <div class="cards">
     {% assign items = site.experiences | sort: "date" | reverse %}
