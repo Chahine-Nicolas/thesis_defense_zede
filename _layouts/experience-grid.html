@@ -3,6 +3,14 @@ layout: default
 ---
 
 <style>
+/* Forcer le wrapper central à occuper tout l'espace */
+.wrapper, .page-content {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
 /* On garde le cadre prévu par le thème, sans max-width personnalisé */
 .cards {
   display: grid;
