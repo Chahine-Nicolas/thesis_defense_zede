@@ -3,52 +3,47 @@ layout: default
 ---
 
 <style>
-/* --- Overwrite ciblé (à placer après le CSS du thème) --- */
+/* --- Reset ciblé : NE PAS inclure .content dans ce groupe --- */
+.site-content, .main-content, .container, .page {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
-/* Evite scroll horizontal */
-html, body { box-sizing: border-box; margin: 0; padding: 0; overflow-x: hidden; }
+/* autres éléments généraux */
+body, main, .wrapper, .page-content {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
 
-/* Force .content à tenir compte de la sidebar */
+/* Sécurité pour éviter scroll horizontal */
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* OVERRIDE pour .content - placé APRES les resets */
 .content {
-  margin-left: 21rem !important;     /* même valeur que ta sidebar (tu peux ajuster) */
-  padding-left: 0 !important;        /* retire l'espace intérieur à gauche */
-  padding-right: 2rem !important;
-  padding-top: 2rem !important;
-  width: calc(100% - 21rem) !important;
-  max-width: none !important;
-  min-width: 0 !important;
-  box-sizing: border-box !important;
+  margin-left: 21rem !important; /* <- force le décalage sans toucher la sidebar */
+  padding: 2rem !important;
+  min-width: 0; /* utile si parent est en flex */
 }
 
-/* Neutralise tout wrapper interne qui pourrait centrer ou ajouter des gutters */
-.content .container,
-.content .page,
-.content .site-content,
-.content .main-content,
-.content .wrapper,
-.content > .container {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: none !important;
-  box-sizing: border-box !important;
+/* Mobile : on retire le décalage sous une certaine largeur */
+@media (max-width: 800px) {
+  .content { margin-left: 0 !important; padding-left: 1rem !important; padding-right: 1rem !important; }
 }
 
-/* Assure que la grille démarre bien à gauche et n'ajoute pas de marge supplémentaire */
+/* Grille et cartes (inchangés) */
 .cards {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  justify-items: stretch;
-  box-sizing: border-box !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
-
-/* Evite que les premiers enfants aient une marge gauche inattendue */
-.content > * {
-  margin-left: 0 !important;
-}
-
-/* Styles que tu avais pour les cartes (inchangés) */
 .card {
   background: #fff;
   border-radius: 1em;
@@ -62,16 +57,6 @@ html, body { box-sizing: border-box; margin: 0; padding: 0; overflow-x: hidden; 
 .card-content { padding: 1rem; text-align: center; }
 .card-content h2 { font-size: 1.3rem; margin: .5rem 0; color: #1976d2; }
 
-/* Mobile fallback : on retire le décalage sur petits écrans */
-@media (max-width: 800px) {
-  .content {
-    margin-left: 0 !important;
-    width: 100% !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-}
-
 /* Fixe le double content */
 .content .content {
   margin: 0 !important;            /* supprime le centrage */
@@ -84,7 +69,6 @@ html, body { box-sizing: border-box; margin: 0; padding: 0; overflow-x: hidden; 
 
 <div class="content">
   <h1>{{ page.title }}</h1>
-
   <div class="cards">
     {% assign items = site.experiences | sort: "date" | reverse %}
     {% for post in items %}
