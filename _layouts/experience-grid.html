@@ -22,6 +22,14 @@ body { box-sizing: border-box; margin: 0; overflow-x: hidden; }
 .card img { width: 100%; height: auto; display: block; }
 .card-content { padding: 1rem; text-align: center; }
 .card-content h2 { font-size: 1.3rem; margin: .5rem 0; color: #1976d2; }
+
+/* Debug : affiche les boîtes pour repérer l'espace */
+.sidebar-about { outline: 3px solid rgba(0,200,0,0.7) !important; }
+.content       { outline: 3px dashed rgba(200,0,0,0.7) !important; background: rgba(255,255,255,0.02); }
+.cards         { outline: 2px dotted rgba(0,0,200,0.6) !important; }
+
+/* Utile : affiche le box-model dans l'inspecteur plus clairement */
+* { box-sizing: border-box !important; }
 </style>
 
 <div class="content">
