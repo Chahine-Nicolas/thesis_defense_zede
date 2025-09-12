@@ -3,22 +3,27 @@ layout: default
 ---
 
 <style>
+/* Layout principal avec Flexbox */
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
 /* Sidebar du thème */
 .sidebar-about {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 21rem;       /* largeur fixe */
-  height: 100vh;      /* pleine hauteur */
+  flex: 0 0 21rem;  /* largeur fixe */
   background: #f4f4f4;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  overflow-y: auto;   /* au cas où le contenu dépasse */
+  padding: 2rem;
+  overflow-y: auto;
 }
 
 /* Contenu principal */
 .content {
-  margin-left: 21rem; /* décale en fonction de la sidebar */
+  flex: 1;          /* prend tout l’espace restant */
   padding: 2rem;
+  min-width: 0;      /* évite les débordements horizontaux */
 }
 
 /* Grille de cartes */
@@ -61,6 +66,11 @@ layout: default
   color: #1976d2;
 }
 </style>
+
+<div class="sidebar-about">
+  <h2>À propos</h2>
+  <p>Texte de ta sidebar</p>
+</div>
 
 <div class="content">
   <h1>{{ page.title }}</h1>
