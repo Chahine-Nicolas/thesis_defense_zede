@@ -34,16 +34,21 @@ body {
 
 /* Mobile : on retire le décalage sous une certaine largeur */
 @media (max-width: 800px) {
-  .content { margin-left: 0 !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+  .cards {
+    width: 100%; /* reprend toute la largeur */
+  }
 }
 
 /* Grille et cartes (inchangés) */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  width: calc(100% - 21rem); /* on enlève la largeur de la sidebar */
+  box-sizing: border-box;
 }
+
 .card {
   background: #fff;
   border-radius: 1em;
@@ -52,6 +57,16 @@ body {
   overflow: hidden;
   border: 1px solid #e0e0e0;
 }
+
+.nav-btn-bar {
+  margin: 0 !important;
+  padding: 0 !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;   /* prend toute la largeur */
+  box-sizing: border-box;
+}
+
 .card:hover { transform: translateY(-6px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
 .card img { width: 100%; height: auto; display: block; }
 .card-content { padding: 1rem; text-align: center; }
