@@ -3,42 +3,84 @@ layout: default
 ---
 
 <style>
-/* Ne pas toucher la sidebar : on lit sa largeur en JS */
-body { box-sizing: border-box; margin: 0; overflow-x: hidden; }
+/* --- Overwrite ciblé (à placer après le CSS du thème) --- */
+
+/* Evite scroll horizontal */
+html, body { box-sizing: border-box; margin: 0; padding: 0; overflow-x: hidden; }
+
+/* Force .content à tenir compte de la sidebar */
 .content {
-  padding: 2rem;
-  transition: margin-left .12s ease;
-  min-width: 0;
-}
-/* Mobile fallback */
-@media (max-width: 800px) {
-  .content { margin-left: 0 !important; padding-left: 1rem; padding-right: 1rem; }
+  margin-left: 21rem !important;     /* même valeur que ta sidebar (tu peux ajuster) */
+  padding-left: 0 !important;        /* retire l'espace intérieur à gauche */
+  padding-right: 2rem !important;
+  padding-top: 2rem !important;
+  width: calc(100% - 21rem) !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
 }
 
-/* Grille & cartes (identiques) */
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-.card { background: #fff; border-radius: 1em; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform .18s, box-shadow .18s; overflow: hidden; border: 1px solid #e0e0e0; }
+/* Neutralise tout wrapper interne qui pourrait centrer ou ajouter des gutters */
+.content .container,
+.content .page,
+.content .site-content,
+.content .main-content,
+.content .wrapper,
+.content > .container {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+/* Assure que la grille démarre bien à gauche et n'ajoute pas de marge supplémentaire */
+.cards {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  justify-items: stretch;
+  box-sizing: border-box !important;
+}
+
+/* Evite que les premiers enfants aient une marge gauche inattendue */
+.content > * {
+  margin-left: 0 !important;
+}
+
+/* Styles que tu avais pour les cartes (inchangés) */
+.card {
+  background: #fff;
+  border-radius: 1em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
 .card:hover { transform: translateY(-6px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
 .card img { width: 100%; height: auto; display: block; }
 .card-content { padding: 1rem; text-align: center; }
 .card-content h2 { font-size: 1.3rem; margin: .5rem 0; color: #1976d2; }
 
-/* Debug : affiche les boîtes pour repérer l'espace */
-.sidebar-about { outline: 3px solid rgba(0,200,0,0.7) !important; }
-.content       { outline: 3px dashed rgba(200,0,0,0.7) !important; background: rgba(255,255,255,0.02); }
-.cards         { outline: 2px dotted rgba(0,0,200,0.6) !important; }
-
-/* Utile : affiche le box-model dans l'inspecteur plus clairement */
-* { box-sizing: border-box !important; }
+/* Mobile fallback : on retire le décalage sur petits écrans */
+@media (max-width: 800px) {
+  .content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
 </style>
 
 <div class="content">
   <h1>{{ page.title }}</h1>
+
   <div class="cards">
     {% assign items = site.experiences | sort: "date" | reverse %}
     {% for post in items %}
       <article class="card">
-        <a href="{{ post.url | relative_url }}">
+        <a href="{{ post.url | relative_url }}" class="no-hover">
           {% if post.image and post.image.path %}
             <img src="{{ post.image.path | relative_url }}" alt="{{ post.title }}">
           {% elsif post.image %}
@@ -50,39 +92,3 @@ body { box-sizing: border-box; margin: 0; overflow-x: hidden; }
     {% endfor %}
   </div>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const content = document.querySelector('.content');
-
-  function updateOffset() {
-    if (!content) return;
-    const sidebar = document.querySelector('.sidebar-about');
-    // si pas de sidebar, on ne fait rien
-    if (!sidebar) {
-      content.style.marginLeft = '';
-      return;
-    }
-    const rect = sidebar.getBoundingClientRect();
-    const width = Math.round(rect.width);
-    // règle mobile : si viewport trop petit => pas de marge
-    if (window.innerWidth <= 800) {
-      content.style.marginLeft = '0';
-    } else {
-      content.style.marginLeft = width + 'px';
-    }
-  }
-
-  // initial + après load (fonts / images) + on resize
-  updateOffset();
-  window.addEventListener('load', updateOffset);
-  window.addEventListener('resize', updateOffset);
-
-  // si le thème modifie dynamiquement la sidebar (ex: via JS), observe les changements
-  const sidebar = document.querySelector('.sidebar-about');
-  if (sidebar && window.MutationObserver) {
-    const mo = new MutationObserver(updateOffset);
-    mo.observe(sidebar, { attributes: true, childList: true, subtree: true });
-  }
-});
-</script>
