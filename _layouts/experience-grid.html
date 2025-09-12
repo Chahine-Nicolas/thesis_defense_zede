@@ -3,42 +3,30 @@ layout: default
 ---
 
 <style>
-/* Essai pour neutraliser toutes les largeurs forcées */
-.site-content, .main-content, .container, .page {
-  max-width: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
+/* Sidebar du thème */
+.sidebar-about {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 21rem;       /* largeur fixe */
+  height: 100vh;      /* pleine hauteur */
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto;   /* au cas où le contenu dépasse */
 }
 
-/* Supprime toutes les limites de largeur sur les conteneurs principaux */
-body, main, .content, .wrapper, .page-content {
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-}
-
-body {
-  display: block !important;
-}
-
+/* Contenu principal */
 .content {
-  margin-left: 21rem; /* ajuste selon la vraie largeur de la bannière */
-  padding: 2rem;      /* pour que ça respire un peu */
+  margin-left: 21rem; /* décale en fonction de la sidebar */
+  padding: 2rem;
 }
 
-main {
-  display: block !important;
-}
-
-/* On garde le cadre prévu par le thème, sans max-width personnalisé */
+/* Grille de cartes */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
-  width: 100%; /* occupe tout l'espace disponible dans .content */
 }
 
 /* Style des cartes */
@@ -81,7 +69,7 @@ main {
     {% assign items = site.experiences | sort: "date" | reverse %}
     {% for post in items %}
       <article class="card">
-        <a href="{{ post.url | relative_url }}" class="no-hover">
+        <a href="{{ post.url | relative_url }}">
           {% if post.image and post.image.path %}
             <img src="{{ post.image.path | relative_url }}" alt="{{ post.title }}">
           {% elsif post.image %}
