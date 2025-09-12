@@ -103,6 +103,21 @@ body {
     left: 0 !important;   /* occupe toute la largeur */
   }
 }
+
+/* Neutralise le faux "mur" créé par le thème */
+body::before {
+  width: var(--sidebar-width) !important;
+}
+
+/* Forcer le contenu et la nav à s'aligner avec la sidebar réelle */
+.content {
+  margin-left: var(--sidebar-width) !important;
+}
+
+.nav-btn-bar {
+  left: var(--sidebar-width) !important;
+}
+
 </style>
 
 <div class="content">
