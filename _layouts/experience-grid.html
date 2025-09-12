@@ -3,7 +3,7 @@ layout: default
 ---
 
 <style>
-/* Debug : affiche les boîtes pour repérer l'espace */
+/* Debug : affiche les boîtes pour repérer l'espace (à retirer quand fini) */
 .sidebar-about { outline: 3px solid rgba(0,200,0,0.7) !important; }
 .content       { outline: 3px dashed rgba(200,0,0,0.7) !important; background: rgba(255,255,255,0.02); }
 .cards         { outline: 2px dotted rgba(0,0,200,0.6) !important; }
@@ -33,20 +33,21 @@ body {
   overflow-x: hidden;
 }
 
-/* OVERRIDE pour .content - placé APRES les resets */
+/* OVERRIDE pour .content */
 .content {
-  margin-left: 21rem !important; /* <- force le décalage sans toucher la sidebar */
+  margin-left: var(--sidebar-width) !important; /* adaptatif */
   padding: 2rem !important;
-  min-width: 0; /* utile si parent est en flex */
+  min-width: 0;
+  box-sizing: border-box;
 }
 
-/* Grille et cartes (inchangés) */
+/* Grille et cartes */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
-  width: calc(100% - 21rem); /* on enlève la largeur de la sidebar */
+  width: calc(100% - var(--sidebar-width)); /* adaptatif */
   box-sizing: border-box;
 }
 
@@ -59,17 +60,6 @@ body {
   border: 1px solid #e0e0e0;
 }
 
-.nav-btn-bar {
-  position: fixed !important;  /* sort du flux et se place par rapport au viewport */
-  margin: 0 !important;
-  padding: 0 !important;
-  left: 0 !important;
-  top: 0 !important;
-  width: 100% !important;   /* prend toute la largeur */
-  box-sizing: border-box;
-  display: flex;
-}
-
 .card:hover { transform: translateY(-6px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
 .card img { width: 100%; height: auto; display: block; }
 .card-content { padding: 1rem; text-align: center; }
@@ -77,23 +67,29 @@ body {
 
 /* Fixe le double content */
 .content .content {
-  margin: 0 !important;            /* supprime le centrage */
-  padding: 0 !important;           /* supprime le padding inutile */
-  max-width: none !important;      /* supprime la largeur fixe du thème */
-  width: 100% !important;          /* occupe toute la place dispo */
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
   box-sizing: border-box !important;
 }
+
 /* Fix barre du haut */
 .nav-btn-bar {
-  margin: 0px -1rem;
-  background-color: var(--body-bg);
+  position: fixed;         /* la fixe en haut */
+  top: 0;
+  left: var(--sidebar-width); /* commence après la sidebar */
+  right: 0;
   height: 5rem;
   display: flex;
   align-items: center;
-  position: relative;
+  margin: 0;
+  padding: 0 1rem;
+  background-color: var(--body-bg);
+  z-index: 1000;           /* reste au-dessus du contenu */
 }
 
-/* Fix mobile : remettre le contenu en plein écran */
+/* Mobile : sidebar disparaît -> nav-bar et contenu prennent 100% */
 @media (max-width: 800px) {
   .content {
     margin-left: 0 !important;
@@ -102,6 +98,9 @@ body {
   }
   .cards {
     width: 100% !important;
+  }
+  .nav-btn-bar {
+    left: 0 !important;   /* occupe toute la largeur */
   }
 }
 </style>
