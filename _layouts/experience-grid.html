@@ -3,38 +3,47 @@ layout: default
 ---
 
 <style>
-/* Layout principal avec Flexbox */
+/* --- Reset ciblé : NE PAS inclure .content dans ce groupe --- */
+.site-content, .main-content, .container, .page {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* autres éléments généraux */
+body, main, .wrapper, .page-content {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Sécurité pour éviter scroll horizontal */
 body {
-  margin: 0;
-  display: flex;
-  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-/* Sidebar du thème */
-.sidebar-about {
-  flex: 0 0 21rem;  /* largeur fixe */
-  background: #f4f4f4;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  padding: 2rem;
-  overflow-y: auto;
-}
-
-/* Contenu principal */
+/* OVERRIDE pour .content - placé APRES les resets */
 .content {
-  flex: 1;          /* prend tout l’espace restant */
-  padding: 2rem;
-  min-width: 0;      /* évite les débordements horizontaux */
+  margin-left: 21rem !important; /* <- force le décalage sans toucher la sidebar */
+  padding: 2rem !important;
+  min-width: 0; /* utile si parent est en flex */
 }
 
-/* Grille de cartes */
+/* Mobile : on retire le décalage sous une certaine largeur */
+@media (max-width: 800px) {
+  .content { margin-left: 0 !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+}
+
+/* Grille et cartes (inchangés) */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
-
-/* Style des cartes */
 .card {
   background: #fff;
   border-radius: 1em;
@@ -43,51 +52,25 @@ body {
   overflow: hidden;
   border: 1px solid #e0e0e0;
 }
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.card-content {
-  padding: 1rem;
-  text-align: center;
-}
-
-.card-content h2 {
-  font-size: 1.3rem;
-  margin: 0.5rem 0;
-  color: #1976d2;
-}
+.card:hover { transform: translateY(-6px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+.card img { width: 100%; height: auto; display: block; }
+.card-content { padding: 1rem; text-align: center; }
+.card-content h2 { font-size: 1.3rem; margin: .5rem 0; color: #1976d2; }
 </style>
-
-<div class="sidebar-about">
-  <h2>À propos</h2>
-  <p>Texte de ta sidebar</p>
-</div>
 
 <div class="content">
   <h1>{{ page.title }}</h1>
-
   <div class="cards">
     {% assign items = site.experiences | sort: "date" | reverse %}
     {% for post in items %}
       <article class="card">
-        <a href="{{ post.url | relative_url }}">
+        <a href="{{ post.url | relative_url }}" class="no-hover">
           {% if post.image and post.image.path %}
             <img src="{{ post.image.path | relative_url }}" alt="{{ post.title }}">
           {% elsif post.image %}
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
           {% endif %}
-          <div class="card-content">
-            <h2>{{ post.title }}</h2>
-          </div>
+          <div class="card-content"><h2>{{ post.title }}</h2></div>
         </a>
       </article>
     {% endfor %}
