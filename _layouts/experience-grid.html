@@ -3,6 +3,14 @@ layout: default
 ---
 
 <style>
+/* Debug : affiche les boîtes pour repérer l'espace */
+.sidebar-about { outline: 3px solid rgba(0,200,0,0.7) !important; }
+.content       { outline: 3px dashed rgba(200,0,0,0.7) !important; background: rgba(255,255,255,0.02); }
+.cards         { outline: 2px dotted rgba(0,0,200,0.6) !important; }
+
+/* Utile : affiche le box-model dans l'inspecteur plus clairement */
+* { box-sizing: border-box !important; }
+
 /* --- Reset ciblé : NE PAS inclure .content dans ce groupe --- */
 .site-content, .main-content, .container, .page {
   max-width: none !important;
