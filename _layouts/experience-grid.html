@@ -83,18 +83,12 @@ body {
 }
 /* Fix barre du haut */
 .nav-btn-bar {
-  position: fixed !important;   /* force la barre collée en haut */
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  height: 3.5rem;               /* adapte selon la hauteur prévue */
-  margin: 0 !important;
-  padding: 0 1rem !important;
+  margin: 0px -1rem;
+  background-color: var(--body-bg);
+  height: 5rem;
   display: flex;
   align-items: center;
-  z-index: 1000;                /* passe au-dessus du reste */
-  background: white;            /* si besoin, évite la transparence */
-  box-sizing: border-box;
+  position: relative;
 }
 
 /* Fix mobile : remettre le contenu en plein écran */
