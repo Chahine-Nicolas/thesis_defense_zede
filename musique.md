@@ -15,9 +15,7 @@ En cartographie, il existe un modèle pour représenter une carte pan-scalaire :
 <div style="height:2em;"></div>
 
 Mais pour transposer un ScaleMaster en partition, il faut un décodeur. Une association entre les principaux concepts musicaux et cartographiques. Avant toute chose, il nous faut d'abord définir l'unité rythmique. Nous associons donc les temps, ces battements réguliers qui structurent tout morceau aux niveaux de zoom, eux aussi réguliers dans l'espace pan-scalaire. Maintenant, il est possible d'attribuer aux représentations le rythme qui leur correspond. Une représentation qui s'étale sur 1 niveau de zoom pourra être représentée par une noire, quand une représentation qui s'étale sur 4 niveaux sera plutôt représentée par une ronde. 
-
 <img src="/assets/img/notes.png" alt="Notes" style="float:right; width:250px; margin:0 0 1em 1em;">
-
 Vous le comprenez, il n'est possible ici que d'écrire une partition cartographique **rythmique**. Par la suite, nous prendrons alors des libertés en leur attribuant une mélodie de manière à véritablement capter la mélodie et la structure rythmique de chaque thème.
 
 
