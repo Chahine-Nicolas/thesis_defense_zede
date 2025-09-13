@@ -10,16 +10,15 @@ Avez-vous déjà vu des sons ? Ou écouté des couleurs ? Aujourd'hui, je vais a
 En cartographie, il existe un modèle pour représenter une carte pan-scalaire : le **ScaleMaster**[^1]. L'axe horizontal suit les niveaux de zoom de la carte, et chaque donnée est représentée par une ligne. Lorsque la donnée subit une transformation, la ligne est coupée par un trait et une mention du processus de généralisation appliqué peut être ajoutée juste au-dessus. Maintenant...ce modèle ne vous rappelle pas quelque chose d'autre ? Un modèle très très employé en musique. Une partition d'orchestre. Chaque donnée n'est qu'un instrument qui joue sa propre partie dans un ensemble rythmique cohérent. Nous avons notre porte d'entrée.
 
 <p>
-  <img src="/assets/img/scalemaster.png" alt="ScaleMaster" style="display:block; margin:0 auto 2em auto; max-width:600px;">
+  <img src="/assets/img/scalemaster.png" alt="ScaleMaster" style="display:block; margin:0 auto;">
 </p>
+<div style="height:2em;"></div>
 
 Mais pour transposer un ScaleMaster en partition, il faut un décodeur. Une association entre les principaux concepts musicaux et cartographiques. Avant toute chose, il nous faut d'abord définir l'unité rythmique. Nous associons donc les temps, ces battements réguliers qui structurent tout morceau aux niveaux de zoom, eux aussi réguliers dans l'espace pan-scalaire. Maintenant, il est possible d'attribuer aux représentations le rythme qui leur correspond. Une représentation qui s'étale sur 1 niveau de zoom pourra être représentée par une noire, quand une représentation qui s'étale sur 4 niveaux sera plutôt représentée par une ronde. 
 
 <img src="/assets/img/notes.png" alt="Notes" style="float:right; width:250px; margin:0 0 1em 1em;">
 
 Vous le comprenez, il n'est possible ici que d'écrire une partition cartographique **rythmique**. Par la suite, nous prendrons alors des libertés en leur attribuant une mélodie de manière à véritablement capter la mélodie et la structure rythmique de chaque thème.
-
-<div style="clear:right; height:2em;"></div>
 
 
 [^1]: Brewer, C. and Buttenfield, B. (2007). Framing Guidelines for Multi-Scale Map Design Using Databases at Multiple Resolutions. Cartography and Geographic Information Science. 34:3–15
