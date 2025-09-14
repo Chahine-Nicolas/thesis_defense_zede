@@ -30,7 +30,7 @@ Vous le comprenez, il n'est possible ici que d'écrire une partition cartographi
 - **Végétation = Basson** : La végétation est le thème secondaire par excellence. Quand il est là, on ne le regarde pas trop, mais quand il disparaît ou n'est pas bien représenté, on ne voit que ça. Il faut donc un instrument non-soliste qui s'entend, sans prendre le dessus sur le thème : le basson.
 - **Voie Ferrée = Tuba** : Ah... voilà notre deuxième thème abandonné ! Représentées dans un gris très pâle et disparaissant presque aussitôt qu’on les distingue, les voies ferrées appellent un équivalent musical discret. J’ai donc choisi le tuba : ses notes graves se contentent d’accompagner, et leur absence passe inaperçue lorsqu’elles s’éteignent.
 
-Le choix des mélodies s'est ensuite fait assez naturellement, en fonction des thèmes principaux et secondaires, souvent accompagnateurs. In fine, voilà donc Google Maps en musique (les niveaux de zoom sont encadrés au-dessus de la partition) :
+Le choix des mélodies s'est ensuite fait en fonction des thèmes principaux et secondaires, souvent accompagnateurs. Voilà donc Google Maps en musique (les niveaux de zoom sont encadrés au-dessus de la partition) :
 <video controls width="800">
   <source src="/assets/video/Google_Maps.mp4" type="video/mp4">
   Votre navigateur ne supporte pas la lecture de vidéos.
