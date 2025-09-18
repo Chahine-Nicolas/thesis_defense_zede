@@ -32,9 +32,10 @@ layout: default
   display: grid;
   gap: 2rem;
   margin-top: 2rem;
-  /* 2 colonnes par défaut */
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
-  justify-content: center; /* centre la grille si écran plus large */
+  /* auto-fit permet aux cartes de s'étirer et remplir tout l'espace disponible */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: stretch; /* s'étire sur toute la largeur */
+  width: 100%;
 }
 
 /* --- Style des cartes --- */
@@ -66,17 +67,10 @@ layout: default
 }
 
 /* --- Responsive : mobile --- */
-@media (max-width: 800px) {
+@media (max-width: 1023px) {
   .cards {
     grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
-/* Grand écran > 1400px : 3 colonnes, cartes plus grandes */
-@media (min-width: 1400px) {
-  .cards {
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 1.5rem;
   }
 }
 </style>
