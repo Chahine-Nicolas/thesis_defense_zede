@@ -36,8 +36,6 @@ Le choix des mélodies s'est ensuite fait en fonction des thèmes principaux et 
   Votre navigateur ne supporte pas la lecture de vidéos.
 </video>
 
-## Écouter le Plan IGN
-
 ## Composer une carte pan-scalaire
 
 plusieurs manières de blabla
@@ -45,6 +43,11 @@ plusieurs manières de blabla
 ### 1) La composition polyrythmique
 
 ### 2) La composition soliste
+
+<video controls width="800">
+  <source src="/assets/video/Google_Maps_soliste.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la lecture de vidéos.
+</video>
 
 ### 3) La composition homophonique
 
