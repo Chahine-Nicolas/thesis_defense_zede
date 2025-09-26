@@ -51,4 +51,9 @@ plusieurs manières de blabla
 
 ### 3) La composition homophonique
 
+<video controls width="800">
+  <source src="/assets/video/Google_Maps_homo.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la lecture de vidéos.
+</video>
+
 ### 4) La composition en canon
