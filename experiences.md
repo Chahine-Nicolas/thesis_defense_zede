@@ -1,5 +1,8 @@
 ---
-layout: experience-grid
+layout: projects
 title: Expériences
-permalink: /experiences/
+show_collection: experiences
+description: >
+  blabla
+no_groups: false
 ---
