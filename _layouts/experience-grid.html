@@ -2,41 +2,6 @@
 layout: default
 ---
 
-<div class="page-content">
-  <header class="page-header">
-    <h1 class="page-title">{{ page.title }}</h1>
-    {% if page.description %}
-      <p class="page-description">{{ page.description }}</p>
-    {% endif %}
-  </header>
-
-  <div class="project-grid">
-    {% assign coll = page.show_collection | default: "projects" %}
-    {% assign items = site[coll] | sort: "date" | reverse %}
-    {% for project in items %}
-      <article class="project-card{% if project.featured or page.featured %} is-featured{% endif %}">
-        <a href="{{ project.url | relative_url }}">
-          {% if project.image and project.image.path %}
-            <img src="{{ project.image.path | relative_url }}"
-                 {% if project.image.srcset %}
-                   srcset="{% for w, src in project.image.srcset %}{{ src | relative_url }} {{ w }}{% unless forloop.last %}, {% endunless %}{% endfor %}"
-                 {% endif %}
-                 alt="{{ project.title }}">
-          {% elsif project.image %}
-            <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
-          {% endif %}
-          <div class="project-info">
-            <h2>{{ project.title }}</h2>
-            {% if project.caption %}
-              <p class="caption">{{ project.caption }}</p>
-            {% endif %}
-          </div>
-        </a>
-      </article>
-    {% endfor %}
-  </div>
-</div>
-
 <style>
 .project-grid {
   display: grid;
