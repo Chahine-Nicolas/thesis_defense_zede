@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: Expériences
 permalink: /experiences/
 ---
