@@ -2,133 +2,83 @@
 layout: default
 ---
 
-<style>
-/* Utile : affiche le box-model dans l'inspecteur plus clairement */
-* { box-sizing: border-box !important; }
+<div class="page-content">
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="page-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
 
-/* --- Reset ciblé : NE PAS inclure .content dans ce groupe --- */
-.site-content, .main-content, .container, .page {
-  max-width: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* autres éléments généraux */
-body, main, .wrapper, .page-content {
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-}
-
-/* Sécurité pour éviter scroll horizontal */
-body {
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-/* OVERRIDE pour .content */
-.content {
-  margin-left: var(--sidebar-width) !important; /* adaptatif */
-  padding: 2rem !important;
-  min-width: 0;
-  box-sizing: border-box;
-}
-
-/* Grille et cartes */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-  width: calc(100% - var(--sidebar-width)); /* adaptatif */
-  box-sizing: border-box;
-}
-
-.card {
-  background: #fff;
-  border-radius: 1em;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  transition: transform 0.18s ease, box-shadow 0.18s;
-  overflow: hidden;
-  border: 1px solid #e0e0e0;
-}
-
-.card:hover { transform: translateY(-6px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
-.card img { width: 100%; height: auto; display: block; }
-.card-content { padding: 1rem; text-align: center; }
-.card-content h2 { font-size: 1.3rem; margin: .5rem 0; color: #1976d2; }
-
-/* Fixe le double content */
-.content .content {
-  margin: 0 !important;
-  padding: 0 !important;
-  max-width: none !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* Fix barre du haut */
-.nav-btn-bar {
-  position: fixed;         /* la fixe en haut */
-  top: 0;
-  left: var(--sidebar-width); /* commence après la sidebar */
-  right: 0;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0 1rem;
-  background-color: var(--body-bg);
-  z-index: 1000;           /* reste au-dessus du contenu */
-}
-
-/* Mobile : sidebar disparaît -> nav-bar et contenu prennent 100% */
-@media (max-width: 800px) {
-  .content {
-    margin-left: 0 !important;
-    width: 100% !important;
-    padding: 1rem !important;
-  }
-  .cards {
-    width: 100% !important;
-  }
-  .nav-btn-bar {
-    left: 0 !important;   /* occupe toute la largeur */
-  }
-}
-
-/* Neutralise le faux "mur" créé par le thème */
-body::before {
-  width: var(--sidebar-width) !important;
-}
-
-/* Forcer le contenu et la nav à s'aligner avec la sidebar réelle */
-.content {
-  margin-left: var(--sidebar-width) !important;
-}
-
-.nav-btn-bar {
-  left: var(--sidebar-width) !important;
-}
-</style>
-
-<div class="content">
-  <h1>{{ page.title }}</h1>
-  <div class="cards">
-    {% assign items = site.experiences | sort: "date" | reverse %}
-    {% for post in items %}
-      <article class="card">
-        <a href="{{ post.url | relative_url }}" class="no-hover">
-          {% if post.image and post.image.path %}
-            <img src="{{ post.image.path | relative_url }}" alt="{{ post.title }}">
-          {% elsif post.image %}
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+  <div class="project-grid">
+    {% assign coll = page.show_collection | default: "projects" %}
+    {% assign items = site[coll] | sort: "date" | reverse %}
+    {% for project in items %}
+      <article class="project-card{% if project.featured or page.featured %} is-featured{% endif %}">
+        <a href="{{ project.url | relative_url }}">
+          {% if project.image and project.image.path %}
+            <img src="{{ project.image.path | relative_url }}"
+                 {% if project.image.srcset %}
+                   srcset="{% for w, src in project.image.srcset %}{{ src | relative_url }} {{ w }}{% unless forloop.last %}, {% endunless %}{% endfor %}"
+                 {% endif %}
+                 alt="{{ project.title }}">
+          {% elsif project.image %}
+            <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
           {% endif %}
-          <div class="card-content"><h2>{{ post.title }}</h2></div>
+          <div class="project-info">
+            <h2>{{ project.title }}</h2>
+            {% if project.caption %}
+              <p class="caption">{{ project.caption }}</p>
+            {% endif %}
+          </div>
         </a>
       </article>
     {% endfor %}
   </div>
 </div>
+
+<style>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.project-card {
+  background: #fff;
+  border-radius: 1em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.project-info {
+  padding: 1rem;
+  text-align: center;
+}
+.project-info h2 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: var(--link-color, #1976d2);
+}
+.caption {
+  color: #666;
+  font-size: 0.9rem;
+}
+.project-card.is-featured {
+  grid-column: span 2;
+}
+@media (max-width: 800px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
