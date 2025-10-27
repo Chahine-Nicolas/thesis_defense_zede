@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: projet
 title: Expérience utilisateurs
 date: 2025-06-15
 image:

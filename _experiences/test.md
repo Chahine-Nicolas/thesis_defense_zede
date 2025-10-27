@@ -1,6 +1,6 @@
 ---
+layout: projet
 title: Projet test
-image: /assets/img/test.jpg
 date: 2025-01-01
 ---
 
