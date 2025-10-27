@@ -1,5 +1,5 @@
 ---
-layout: projet
+layout: project
 title: Projet test
 date: 2025-01-01
 ---
