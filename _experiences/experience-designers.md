@@ -1,5 +1,5 @@
 ---
-layout: experience-grid
+layout: post
 title: Expérience designers
 date: 2025-04-22  
 image:

@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: grid
 title: Expériences
 show_collection: experiences
 description: >

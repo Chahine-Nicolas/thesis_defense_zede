@@ -1,5 +1,5 @@
 ---
-layout: experience-grid
+layout: post
 title: Projet test
 date: 2025-01-01
 ---

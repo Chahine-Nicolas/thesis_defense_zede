@@ -3,11 +3,10 @@
 # ========================================================================================
 
 url: https://berenice-lm.github.io
-lang: en
+lang: fr
 title: La progressivité
 description: >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  à écrire
 tagline: Site de vulgarisation scientifique
 keywords: [cartographie]
 logo: /assets/img/icon.gif
@@ -70,37 +69,37 @@ kramdown:
 # HYDEJACK SETTINGS
 # ========================================================================================
 
-hydejack:
-  post_addons: [related, random]
-  project_addons: []
-  no_mark_external: false
-  no_push_state: false
-  no_drawer: false
-  no_navbar: false
-  no_search: false
-  no_inline_css: false
-  no_page_style: false
-  no_break_layout: true
-  no_toc: false
-  no_third_column: false
-  no_large_headings: false
-  no_structured_data: false
-  no_theme_color: false
-  no_breadcrumbs: false
-  use_lsi: true
-  cookies_banner: false
-  advertise: false
-  hide_dates: false
-  hide_last_modified: false
-  dark_mode:
-    always: false
-    dynamic: true
-    icon: true
-  offline:
-    enabled: false
-    cache_version: 13
-    precache_assets:
-      - /assets/img/swipe.svg
+# hydejack:
+#   post_addons: [related, random]
+#   project_addons: []
+#   no_mark_external: false
+#   no_push_state: false
+#   no_drawer: false
+#   no_navbar: false
+#   no_search: false
+#   no_inline_css: false
+#   no_page_style: false
+#   no_break_layout: true
+#   no_toc: false
+#   no_third_column: false
+#   no_large_headings: false
+#   no_structured_data: false
+#   no_theme_color: false
+#   no_breadcrumbs: false
+#   use_lsi: true
+#   cookies_banner: false
+#   advertise: false
+#   hide_dates: false
+#   hide_last_modified: false
+#   dark_mode:
+#     always: false
+#     dynamic: true
+#     icon: true
+#   offline:
+#     enabled: false
+#     cache_version: 13
+#     precache_assets:
+#       - /assets/img/swipe.svg
 
 # ========================================================================================
 # COLLECTIONS
@@ -112,9 +111,6 @@ collections:
     output: true
   featured_tags:
     permalink: /tag-:name/
-    output: true
-  projects:
-    permalink: /projects/:path/
     output: true
   example:
     output: true
