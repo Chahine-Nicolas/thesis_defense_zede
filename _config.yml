@@ -71,8 +71,8 @@ kramdown:
 # ========================================================================================
 
 hydejack:
-  post_addons: [introduction, newsletter, related, random, comments]
-  project_addons: [introduction, newsletter, other, comments]
+  post_addons: [related, random]
+  project_addons: []
   no_mark_external: false
   no_push_state: false
   no_drawer: false
