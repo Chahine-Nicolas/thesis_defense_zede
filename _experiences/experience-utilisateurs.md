@@ -1,5 +1,5 @@
 ---
-layout: projet
+layout: experience-grid
 title: Expérience utilisateurs
 date: 2025-06-15
 image:
