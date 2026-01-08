@@ -10,6 +10,6 @@ hide_image: false
 cover: true
 ---
 
-test test
+Les cartes... c'est plutôt cool.
 
 ![Description](/assets/gif/simpsons_generalisation.gif)
