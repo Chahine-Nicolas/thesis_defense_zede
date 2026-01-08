@@ -11,3 +11,5 @@ cover: true
 ---
 
 test test
+
+![Description](/assets/gif/simpsons_generalisation.gif)
