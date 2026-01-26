@@ -45,7 +45,8 @@ paginate_path: /:num/
 # ========================================================================================
 
 # Le thème Hydejack est chargé localement via le Gemfile
-theme: jekyll-theme-hydejack
+# theme: jekyll-theme-hydejack
+# Note: On utilise des layouts personnalisés dans _layouts/
 
 # ========================================================================================
 # APPEARANCE
