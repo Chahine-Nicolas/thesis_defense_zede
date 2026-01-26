@@ -1,9 +1,9 @@
 ---
-layout: plain
+layout: default
+title: La progressivité dans les médias
+permalink: /progressivite/
 sitemap: false
 ---
-
-# La progressivité dans les médias
 
 blabla introduction
 

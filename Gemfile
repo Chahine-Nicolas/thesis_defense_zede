@@ -28,8 +28,6 @@ group :jekyll_plugins do
   gem "jekyll-default-layout", github: "benbalter/jekyll-default-layout", branch: "main"
   gem "jekyll-feed"
   gem "jekyll-optional-front-matter"
-  gem "jekyll-paginate"
-  gem "jekyll-readme-index"
   gem "jekyll-redirect-from"
   gem "jekyll-relative-links"
   gem "jekyll-seo-tag", github: "hydecorp/jekyll-seo-tag"

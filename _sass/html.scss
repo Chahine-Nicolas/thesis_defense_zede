@@ -3,6 +3,14 @@ html {
   --font-family-heading: #{$font-family-heading};
   --code-font-family: #{$code-font-family};
 
+  --gray: #{$gray};
+  --gray-bg: #{$gray-bg};
+  --gray-text: #{$gray-text};
+  --menu-text: #{$menu-text};
+  --body-color: #{$body-color};
+  --body-bg: #{$body-bg};
+  --border-color: #{$border-color};
+
   --root-font-size: #{$root-font-size};
   --root-font-size-medium: #{$root-font-size-medium};
   --root-font-size-large: #{$root-font-size-large};

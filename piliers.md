@@ -1,9 +1,9 @@
 ---
-layout: plain
+layout: default
+title: Les piliers de la progressivité en cartographie
+permalink: /piliers/
 sitemap: false
 ---
-
-# Les piliers de la progressivité en cartographie
 
 blabla introduction
 

@@ -1,8 +1,7 @@
 ---
 layout: experience-grid
 title: Expériences
-show_collection: experiences
+permalink: /experiences/
 description: >
-  Découvrez nos expériences cartographiques en forme interactive
-no_groups: false
+  Expériences cartographiques
 ---

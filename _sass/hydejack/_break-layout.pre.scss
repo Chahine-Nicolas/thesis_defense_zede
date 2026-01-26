@@ -20,27 +20,15 @@ pre, table:not(.highlight), .katex-display, .break-layout, mjx-container[jax="CH
   @media screen {
     position: relative;
     width: calc(100% + #{$pad});
-    border-top-right-radius: 0!important;
-    border-bottom-right-radius: 0!important;
   }
 
   @media screen and (min-width: $content-width) {
-    $x: null;
-    @if $gh-pages-compat {
-      $x:      ($content-width / 2) - $pad;
-    } @else {
-      $x: calc(($content-width / 2) - $pad);
-    }
+    $x: ($content-width / 2) - $pad;
     width: calc(100% + 50vw - #{$x});
   }
 
   @media screen and (min-width: $break-point-2) {
-    $x: null;
-    @if $gh-pages-compat {
-      $x:      ($content-width-2 / 2) - $pad;
-    } @else {
-      $x: calc(($content-width-2 / 2) - $pad);
-    }
+    $x: ($content-width-2 / 2) - $pad;
     width: calc(100% + 50vw - #{$x});
   }
 
@@ -55,13 +43,7 @@ pre, table:not(.highlight), .katex-display, .break-layout, mjx-container[jax="CH
   }
 
   @media screen and (min-width: $break-point-dynamic) {
-    $x: null;
-    @if $gh-pages-compat {
-      $x:     (($content-width-5 / 2) - ($content-padding * 2) + 21rem);
-    } @else {
-      $x: calc(($content-width-5 / 2) - ($content-padding * 2) + 21rem);
-    }
-    width: calc(100% + 50vw - #{$x} + 2px);
+    width: calc(100% + #{$content-margin-5 + 2rem});
   }
 }
 
@@ -71,19 +53,10 @@ body:not(.no-break-layout) {
   }
 }
 
-body.no-break-layout {
-  width: calc(100% + #{$content-margin-5 + 2rem});
-}
-
 body.no-toc:not(.no-break-layout) {
   pre, table:not(.highlight), .katex-display, .break-layout, mjx-container[jax="CHTML"][display="true"] {
     @media screen and (min-width: $break-point-dynamic) {
-      $x: null;
-      @if $gh-pages-compat {
-        $x:     (($content-width-5 / 2) - ($content-padding * 2));
-      } @else {
-        $x: calc(($content-width-5 / 2) - ($content-padding * 2));
-      }
+      $x: ($content-width-5 / 2) - ($content-padding * 2);
       width: calc(100% + 50vw - #{$x});
     }
   }

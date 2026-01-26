@@ -1,19 +1,19 @@
 ---
-layout: default
+layout: page
 ---
 
 <style>
-.cards {
+.experience-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 
-.card {
+.experience-card {
   background: #fff;
   border-radius: 1.5em;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
   overflow: hidden;
   border: 1px solid #e0e0e0;
@@ -23,12 +23,12 @@ layout: default
   flex-direction: column;
 }
 
-.card:hover { 
-  transform: translateY(-10px); 
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15); 
+.experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.card a {
+.experience-card a {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -36,16 +36,16 @@ layout: default
   color: inherit;
 }
 
-.card img { 
-  width: 100%; 
+.experience-card img {
+  width: 100%;
   height: 250px;
   object-fit: cover;
-  display: block; 
+  display: block;
   flex-shrink: 0;
 }
 
-.card-content { 
-  padding: 1.5rem; 
+.experience-card-content {
+  padding: 1.5rem;
   text-align: center;
   flex-grow: 1;
   display: flex;
@@ -53,40 +53,46 @@ layout: default
   justify-content: center;
 }
 
-.card-content h2 { 
-  font-size: 1.2rem; 
+.experience-card-content h2 {
+  font-size: 1.2rem;
   margin: 0;
-  color: rgb(79,177,186);
+  color: rgb(79, 177, 186);
   font-weight: 600;
   line-height: 1.4;
 }
 
+/* Mobile : une seule colonne */
 @media (max-width: 56em) {
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  .experience-grid {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  .card img {
+  
+  .experience-card img {
     height: 200px;
   }
 }
 </style>
 
-<div class="cards">
+{{ content }}
+
+<div class="experience-grid">
   {% assign items = site.experiences | sort: "date" | reverse %}
-  {% for post in items %}
-    <article class="card">
-      <a href="{{ post.url | relative_url }}">
-        {% if post.image and post.image.path %}
-          <img src="{{ post.image.path | relative_url }}" alt="{{ post.title }}">
-        {% elsif post.image %}
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+  {% for exp in items %}
+    <article class="experience-card">
+      <a href="{{ exp.url | relative_url }}">
+        {% if exp.image.path %}
+          <img src="{{ exp.image.path | relative_url }}" alt="{{ exp.title }}">
+        {% elsif exp.image %}
+          <img src="{{ exp.image | relative_url }}" alt="{{ exp.title }}">
         {% else %}
-          <div style="width: 100%; height: 250px; background: linear-gradient(135deg, rgb(79,177,186), rgb(25,55,71)); display: flex; align-items: center; justify-content: center; color: white;">
-            <span>{{ post.title }}</span>
+          <div style="width: 100%; height: 250px; background: linear-gradient(135deg, rgb(79,177,186), rgb(25,55,71)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+            {{ exp.title }}
           </div>
         {% endif %}
-        <div class="card-content"><h2>{{ post.title }}</h2></div>
+        <div class="experience-card-content">
+          <h2>{{ exp.title }}</h2>
+        </div>
       </a>
     </article>
   {% endfor %}

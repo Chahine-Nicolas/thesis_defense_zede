@@ -1,9 +1,9 @@
 ---
-layout: plain
+layout: default
+title: Écouter une carte pan-scalaire 
+permalink: /musique/
 sitemap: false
 ---
-
-# Écouter une carte pan-scalaire 
 
 Avez-vous déjà vu des sons ? Ou écouté des couleurs ? Aujourd'hui, je vais ajouter ma pierre à l'édifice de ce mélange sensoriel, en vous expliquant comment il est possible d'**écouter** une carte pan-scalaire. Et non, il n'est pas nécessaire d'avoir le cerveau des synéstésiques pour suivre : il suffit de posséder des yeux en état de lire ce post et des oreilles je l'espère mélomanes.
 

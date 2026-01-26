@@ -42,7 +42,6 @@ sup {
 // List of footnotes
 .footnotes {
   margin-top: 5rem;
-  margin-bottom: 5rem;
 
   > ol {
     color: var(--gray);
@@ -63,7 +62,7 @@ sup {
     @extend .color-transition;
     content: "";
     display: block;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     border: 0;
     border-top: 1px solid var(--border-color);
   }
