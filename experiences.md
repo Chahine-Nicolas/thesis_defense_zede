@@ -1,8 +1,8 @@
 ---
-layout: grid
+layout: experience-grid
 title: Expériences
 show_collection: experiences
 description: >
-  blabla
+  Découvrez nos expériences cartographiques en forme interactive
 no_groups: false
 ---
