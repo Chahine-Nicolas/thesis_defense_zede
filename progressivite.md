@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: La progressivité dans les médias
 permalink: /progressivite/
 sitemap: false

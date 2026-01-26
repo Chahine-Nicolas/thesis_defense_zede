@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: La progressivité en BD
 permalink: /bd/
 ---

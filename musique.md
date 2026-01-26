@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Écouter une carte pan-scalaire 
 permalink: /musique/
 sitemap: false
