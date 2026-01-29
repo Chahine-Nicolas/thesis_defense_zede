@@ -38,9 +38,11 @@ Le choix des mélodies s'est ensuite fait en fonction des thèmes principaux et 
 
 ## Composer une carte pan-scalaire
 
-plusieurs manières de blabla
+En cartographie, comme en musique, certaines structures rythmiques peuvent néanmoins se cacher derrière un motif afin de le rendre plus clair ou plus distinguable. Les différents thèmes peuvent intéragir de diverses manières entre eux ; c'est au cartographe d'assumer son rôle de compositeur afin de faire danser ses mélodies cartographiques de manière cohérente.
 
 ### 1) La composition polyrythmique
+
+en cours de création...
 
 ### 2) La composition soliste
 
@@ -49,6 +51,8 @@ plusieurs manières de blabla
   Votre navigateur ne supporte pas la lecture de vidéos.
 </video>
 
+La composition soliste suppose qu'un thème cartographique principal assume la "mélodie principale", caractérisée par un rythme beaucoup plus rapide. Le reste des thèmes n'est là que pour le soutenir, et s'effacent rythmiquement afin de l'accompagner discrètement.
+
 ### 3) La composition homophonique
 
 <video controls width="800">
@@ -56,4 +60,8 @@ plusieurs manières de blabla
   Votre navigateur ne supporte pas la lecture de vidéos.
 </video>
 
+La composition homophonique applique le même rythme à tous ses thèmes cartographiques, qu'ils soient principaux ou secondaires. Dans l'exemple ci-dessus, tous évoluent à chaque niveau de zoom, donnant une impression d'unité qui peut néanmoins gommer les spécificités de certains thèmes.
+
 ### 4) La composition en canon
+
+en cours de création...
