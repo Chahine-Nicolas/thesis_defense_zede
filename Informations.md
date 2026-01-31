@@ -4,21 +4,50 @@ title: Informations
 permalink: /Informations/
 ---
 
-<div style="margin-bottom: 30px;">
-  <div style="margin-bottom: 15px;">
-    <h2 style="margin-bottom: 5px; font-size: 1.3em; color: #333;">When</h2>
-    <p style="margin: 0; font-size: 1em; line-height: 1.5; color: #555;">
+<div style="
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+">
+
+  <div style="margin-bottom: 20px;">
+    <h2 style="
+      margin-bottom: 6px;
+      font-size: 1.3em;
+      color: #ffffff;
+    ">
+      When
+    </h2>
+    <p style="
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.5;
+      color: #dddddd;
+    ">
       Friday, 20 February at 14:00 (2:00 PM CET)
     </p>
   </div>
 
   <div>
-    <h2 style="margin-bottom: 5px; font-size: 1.3em; color: #333;">Where</h2>
-    <p style="margin: 0; font-size: 1em; line-height: 1.5; color: #555;">
+    <h2 style="
+      margin-bottom: 6px;
+      font-size: 1.3em;
+      color: #ffffff;
+    ">
+      Where
+    </h2>
+    <p style="
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.5;
+      color: #dddddd;
+    ">
       Picard Amphitheater, Géodata Paris (formerly ENSG-Géomatique)<br>
       6–8 avenue Blaise Pascal, 77420 Champs-sur-Marne
     </p>
   </div>
+
 </div>
 
 
@@ -45,14 +74,7 @@ permalink: /Informations/
       <em>Directeur de recherche</em><br>
        CEA LIST
     </div>
-
-    <div class="card">
-      <strong>Hervé Le Borgne</strong><br>
-      <span class="role">Examiner</span><br>
-      <em>Researcher</em><br>
-      Apple
-    </div>
-
+    
     <div class="card">
       <strong>Marie-Odile Bzegze</strong><br>
       <span class="role">Examiner</span><br>
