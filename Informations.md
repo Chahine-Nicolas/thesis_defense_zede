@@ -4,6 +4,24 @@ title: Informations
 permalink: /Informations/
 ---
 
+<div style="margin-bottom: 30px;">
+  <div style="margin-bottom: 15px;">
+    <h2 style="margin-bottom: 5px; font-size: 1.3em; color: #333;">When</h2>
+    <p style="margin: 0; font-size: 1em; line-height: 1.5; color: #555;">
+      Friday, 20 February at 14:00 (2:00 PM CET)
+    </p>
+  </div>
+
+  <div>
+    <h2 style="margin-bottom: 5px; font-size: 1.3em; color: #333;">Where</h2>
+    <p style="margin: 0; font-size: 1em; line-height: 1.5; color: #555;">
+      Picard Amphitheater, Géodata Paris (formerly ENSG-Géomatique)<br>
+      6–8 avenue Blaise Pascal, 77420 Champs-sur-Marne
+    </p>
+  </div>
+</div>
+
+
 <div style="
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -12,40 +30,40 @@ permalink: /Informations/
 ">
 
   <div>
-    <h2>🏅 Jury Members</h2>
+    <h2>Jury Members</h2>
 
     <div class="card">
-      <strong>Frédéric Jurie</strong><br>
+      <strong>Michel Kasser</strong><br>
       <span class="role">Reviewer</span><br>
-      <em>Professeur des Universités</em><br>
-      Université de Caen Normandie
+      <em>Professeur des universités</em><br>
+      HEIG-VD
     </div>
 
     <div class="card">
-      <strong>Alasdair Newson</strong><br>
+      <strong>Hervé Le Borgne</strong><br>
       <span class="role">Reviewer</span><br>
-      <em>Maître de Conférences</em><br>
-      Sorbonne Université
+      <em>Directeur de recherche</em><br>
+       CEA LIST
     </div>
 
     <div class="card">
-      <strong>Stephan Richter</strong><br>
+      <strong>Hervé Le Borgne</strong><br>
       <span class="role">Examiner</span><br>
       <em>Researcher</em><br>
       Apple
     </div>
 
     <div class="card">
-      <strong>Vicky Kalogeiton</strong><br>
+      <strong>Marie-Odile Bzegze</strong><br>
       <span class="role">Examiner</span><br>
-      <em>Professor</em><br>
-      École Polytechnique
+      <em>Directrice de recherche</em><br>
+      INRIA Nancy Grand Est
     </div>
   </div>
 
 
   <div>
-    <h2>👥 Thesis Supervisors</h2>
+    <h2>Thesis Supervisors</h2>
 
     <div class="card">
       <strong>Valérie Gouet-Brunet</strong><br>
@@ -61,18 +79,5 @@ permalink: /Informations/
       UGE, IGN – Geodata Paris
     </div>
 
-    <div class="card">
-      <strong>Jean-Yves Franceschi</strong><br>
-      <span class="role">PhD co-supervisor</span><br>
-      <em>Chercheur</em><br>
-      Criteo AI Lab
-    </div>
-
-    <div class="card">
-      <strong>Jeremie Mary</strong><br>
-      <span class="role">PhD co-supervisor</span><br>
-      <em>Chercheur</em><br>
-      Criteo AI Lab
-    </div>
   </div>
 </div>
