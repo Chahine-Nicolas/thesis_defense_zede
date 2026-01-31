@@ -10,23 +10,22 @@ baseurl: "/thesis_defense_zede"
 ########################################################################################################################
 
 lang: fr
-title: La Progressivité
-description: Site de vulgarisation scientifique
+title: PhD Defense
+description: Point cloud based large-scale place recognition
 # A shorter description for the sidebar.
-tagline: Site de vulgarisation scientifique
+tagline: Point cloud based large-scale place recognition
 
 keywords: [
-  'cartographie',
-  'pan-scalaire',
-  'progressivité',
-  'cinéma',
-  'musique',
-  'BD'
+  'Indexing',
+  'Retrieval',
+  'Place Recognition',
+  'Information Retrieval',
+  'Deep Learning'
   ]
 
 # A (square) logo for the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo: /assets/img/icon.gif
+# logo: /assets/img/icon.gif
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
