@@ -40,6 +40,8 @@ share-links-active:
 
 # Add links to the sidebar.
 menu:
+  - title: Informations
+    url: /Informations/
   - title: Abstract
     url: /Abstract/
   - title: Résumé
@@ -48,6 +50,7 @@ menu:
     url: /Attending/
   - title: Visio Conference
     url: /visio/
+  
 
 copyright: ''
 
