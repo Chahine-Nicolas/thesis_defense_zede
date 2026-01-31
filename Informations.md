@@ -70,7 +70,7 @@ permalink: /Informations/
     </div>
     
     <div class="card">
-      <strong>Marie-Odile Bzegze</strong><br>
+      <strong>Marie-Odile Berger</strong><br>
       <span class="role">Examiner</span><br>
       <em>Directrice de recherche</em><br>
       INRIA Nancy Grand Est
