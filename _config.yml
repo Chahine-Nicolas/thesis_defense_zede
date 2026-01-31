@@ -2,8 +2,8 @@
 # Site Settings                                                                                                        #
 ########################################################################################################################
 
-url: "https://berenice-lm.github.io"
-baseurl: ''
+url: "https://Chahine-Nicolas.github.io"
+baseurl: "/thesis_defense_zede"
 
 ########################################################################################################################
 # General settings                                                                                                     #
@@ -41,9 +41,9 @@ share-links-active:
 
 # Add links to the sidebar.
 menu:
-  - title: La progressivité dans les médias
+  - title: Abstract
     url: /progressivite/
-  - title: Les piliers de la progressivité
+  - title: Résumé
     url: /piliers/
   - title: Expériences cartographiques
     url: /experiences/
