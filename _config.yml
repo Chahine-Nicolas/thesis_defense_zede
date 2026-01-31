@@ -42,9 +42,9 @@ share-links-active:
 # Add links to the sidebar.
 menu:
   - title: Abstract
-    url: /progressivite/
+    url: /Abstract/
   - title: Résumé
-    url: /piliers/
+    url: /Resume/
   - title: Expériences cartographiques
     url: /experiences/
   - title: Écouter une carte pan-scalaire
