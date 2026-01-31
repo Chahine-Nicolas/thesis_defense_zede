@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Résumé
-permalink: /piliers/
+permalink: /Resume/
 sitemap: false
 ---
 
