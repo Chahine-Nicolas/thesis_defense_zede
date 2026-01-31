@@ -30,8 +30,8 @@ keywords: [
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name: Bérénice Le Mao
-  email: lemaoberenice@gmail.com
+  name: Chahine-Nicolas Zede
+  email: chahine-nicolas@outlook.fr
   rss: true
 
 share-links-active:
@@ -44,12 +44,10 @@ menu:
     url: /Abstract/
   - title: Résumé
     url: /Resume/
-  - title: Expériences cartographiques
+  - title: Attending
     url: /experiences/
-  - title: Écouter une carte pan-scalaire
+  - title: Visio Conference
     url: /musique/
-  - title: La progressivité en BD
-    url: /bd/
 
 copyright: ''
 
@@ -60,13 +58,13 @@ permalink: /blog/:title
 ########################################################################################################################
 
 # Sidebar image and theme color of the site.
-accent_image: /assets/img/background2.jpg
+# accent_image: /assets/img/background2.jpg
 accent_color: rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color: rgb(8,46,57)
+theme_color: rgb(189,239,236)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
@@ -277,6 +275,6 @@ google_site_verification: UA-175070505-1
 
 # Used on index and about sites
 social:
-  name: Bérénice Le Mao
+  name: Chahine-Nicolas Zede
 links:
-- https://github.com/berenice-lm
+- https://github.com/Chahine-Nicola
