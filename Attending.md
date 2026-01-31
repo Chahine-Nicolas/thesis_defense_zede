@@ -1,5 +1,5 @@
 ---
-layout: experience-grid
+layout: page
 title: Attending
 permalink: /Attending/
 description: >
