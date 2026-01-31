@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Abstract
-permalink: /progressivite/
+permalink: /Abstract/
 sitemap: false
 ---
 
