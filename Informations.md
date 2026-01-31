@@ -4,12 +4,7 @@ title: Informations
 permalink: /Informations/
 ---
 
-<div style="
-  margin-bottom: 30px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-">
+<div style="margin-bottom: 30px;">
 
   <div style="margin-bottom: 20px;">
     <h2 style="
@@ -23,7 +18,7 @@ permalink: /Informations/
       margin: 0;
       font-size: 1em;
       line-height: 1.5;
-      color: #dddddd;
+      color: #ffffff;
     ">
       Friday, 20 February at 14:00 (2:00 PM CET)
     </p>
@@ -41,7 +36,7 @@ permalink: /Informations/
       margin: 0;
       font-size: 1em;
       line-height: 1.5;
-      color: #dddddd;
+      color: #ffffff;
     ">
       Picard Amphitheater, Géodata Paris (formerly ENSG-Géomatique)<br>
       6–8 avenue Blaise Pascal, 77420 Champs-sur-Marne
@@ -49,7 +44,6 @@ permalink: /Informations/
   </div>
 
 </div>
-
 
 <div style="
   display: grid;
