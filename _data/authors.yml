@@ -2,10 +2,10 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name: Bérénice Le Mao
-  linkedin: bérénice-le-mao-04572a204
-  github: berenice-lm
-  email: lemaoberenice@gmail.com
+  name: Chahine-Nicolas Zede
+  linkedin: chahine-nicolas-zede
+  github: Chahine-Nicolas
+  email: chahine-nicolas@outlook.fr
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
@@ -20,9 +20,9 @@ author1:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    linkedin: bérénice-le-mao-04572a204
-    github: berenice-lm
-    email: lemaoberenice@gmail.com
+    linkedin: chahine-nicolas-zede
+    github: Chahine-Nicolas
+    email: chahine-nicolas@outlook.fr
 # Another author (optional)
 # author2:
 #   name: <firtname> <lastname>
