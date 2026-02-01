@@ -10,7 +10,6 @@ permalink: /Informations/
     <h2 style="
       margin-bottom: 6px;
       font-size: 1.3em;
-      color: #ffffff;
     ">
       When
     </h2>
@@ -18,7 +17,6 @@ permalink: /Informations/
       margin: 0;
       font-size: 1em;
       line-height: 1.5;
-      color: #ffffff;
     ">
       Friday, 20 February at 14:00 (2:00 PM CET)
     </p>
@@ -28,7 +26,6 @@ permalink: /Informations/
     <h2 style="
       margin-bottom: 6px;
       font-size: 1.3em;
-      color: #ffffff;
     ">
       Where
     </h2>
@@ -36,7 +33,6 @@ permalink: /Informations/
       margin: 0;
       font-size: 1em;
       line-height: 1.5;
-      color: #ffffff;
     ">
       Picard Amphitheater, Géodata Paris (formerly ENSG-Géomatique)<br>
       6–8 avenue Blaise Pascal, 77420 Champs-sur-Marne
@@ -45,12 +41,6 @@ permalink: /Informations/
 
 </div>
 
-<div style="
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-top: 30px;
-">
 
   <div>
     <h2>Jury Members</h2>
