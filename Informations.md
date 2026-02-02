@@ -41,7 +41,7 @@ permalink: /Informations/
 
 </div>
 
-
+<div>
   <div>
     <h2>Jury Members</h2>
 
