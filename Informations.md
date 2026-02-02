@@ -41,7 +41,12 @@ permalink: /Informations/
 
 </div>
 
-<div>
+<div style="
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 30px;
+">
   <div>
     <h2>Jury Members</h2>
 
