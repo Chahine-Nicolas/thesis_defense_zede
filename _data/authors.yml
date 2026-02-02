@@ -10,11 +10,10 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about: >
-    Doctorante à l'IGN et grande amoureuse des chats. D'ailleurs, il n'y en a pas assez sur ce site, je vais y remédier dès que j'aurai un peu de temps !
 
   # This photo will be used in the about section
   picture:
-    path: /assets/img/berenice.jpg
+    path: /assets/img/chahine.jpg
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
