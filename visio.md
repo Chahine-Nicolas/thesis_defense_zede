@@ -14,7 +14,7 @@ function downloadCV() {
 </script>
 
 <a href="{{ site.baseurl }}/assets/files/CV_fr.pdf" class="btn">
-  📄 Download my CV
+  Download my CV d
 </a>
 
 <a href="{{ '/assets/files/CV_fr.pdf' | relative_url }}" class="btn">
